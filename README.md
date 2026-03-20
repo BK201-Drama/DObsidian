@@ -28,6 +28,11 @@ memory/
 scripts/
   init_topic.py
   update_manifest.py
+  rebuild_index.py
+  dedupe_topic_cards.py
+
+templates/
+  topic-card.md
 
 docs/
   local-logs.md
@@ -53,7 +58,20 @@ python3 scripts/init_topic.py --topic ideas
 
 # 2) Update manifest for a topic
 python3 scripts/update_manifest.py --topic github --new-items 3 --kept-topics 2 --used-tokens-est 180
+
+# 3) Rebuild topic index
+python3 scripts/rebuild_index.py
+
+# 4) Dedupe repeated cards
+python3 scripts/dedupe_topic_cards.py
 ```
+
+## P0 Improvements Applied
+
+- Standardized topic-card fields: 主题 / 结论 / 证据 / 后续动作 / 风险 / 状态 / 更新时间
+- Added index page: `knowledge/_index.md`
+- Added dedupe script: `scripts/dedupe_topic_cards.py`
+- Added per-topic changelog: `knowledge/*/changelog.md`
 
 ## Memory Layers
 
