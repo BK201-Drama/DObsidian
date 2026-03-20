@@ -1,0 +1,16 @@
+# Local raw logs (never push)
+local_logs/
+
+# Optional local staging folders
+ai/
+finance/
+quant/
+shared/
+knowledge/*/delta/
+
+# Python/cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
