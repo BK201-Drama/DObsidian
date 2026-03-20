@@ -11,3 +11,11 @@
 - 风险：无结构约束时，长期会出现重复与检索困难。
 - 状态：open
 - 更新时间：2026-03-20T18:25:00+08:00
+
+### 主题：Multi-agent orchestration as internal capability
+- 结论：已将多 agent 编排确定为 OpenClaw 内部能力，采用“按需启用”策略，不默认一键派单。
+- 证据：已创建并打包 `multi-agent-orchestrator` skill（含 mission 生成与报告合并脚本）。
+- 后续动作：在复杂任务中由父 agent 负责拆解/派发/收口，子 agent 负责分工执行与回传。
+- 风险：并发任务若边界不清会产生文件冲突；无独立验收会导致“看似完成、实际不可交付”。
+- 状态：tracking
+- 更新时间：2026-03-20T20:04:00+08:00
